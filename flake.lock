@@ -181,7 +181,10 @@
         "empty": "empty",
         "flake-compat": "flake-compat_2",
         "flake-parts": "flake-parts",
-        "holochain": "holochain_2",
+        "holochain": [
+          "holochain",
+          "empty"
+        ],
         "lair": [
           "holochain",
           "empty"
@@ -220,33 +223,16 @@
     "holochain_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1690227710,
-        "narHash": "sha256-HRVEz5Ldg2+pqciOpZ9fNdMfU93r/3LmUsbTA9jfDIY=",
+        "lastModified": 1693355665,
+        "narHash": "sha256-XjTmG9UahtUB87D7/1iUplI70rWXPunI2kO/OiR6mj0=",
         "owner": "holochain",
         "repo": "holochain",
-        "rev": "3f594f1a5cef41e896b99b6b46d336d54da3299d",
+        "rev": "76df3f9fb70ecc3db495f7728d962467e1cd0fd1",
         "type": "github"
       },
       "original": {
         "owner": "holochain",
-        "ref": "holochain-0.2.1",
-        "repo": "holochain",
-        "type": "github"
-      }
-    },
-    "holochain_3": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1694632043,
-        "narHash": "sha256-5QWUpWnwuzUi3hROrOZyQNla8iGdr+oGCH2nniRePBE=",
-        "owner": "holochain",
-        "repo": "holochain",
-        "rev": "1f59d33623031eefe76b5f3573970c9c33f21877",
-        "type": "github"
-      },
-      "original": {
-        "owner": "holochain",
-        "ref": "holochain-0.2.2",
+        "ref": "holochain-0.3.0-beta-dev.16",
         "repo": "holochain",
         "type": "github"
       }
@@ -454,13 +440,13 @@
     },
     "versions": {
       "inputs": {
-        "holochain": "holochain_3",
+        "holochain": "holochain_2",
         "lair": "lair",
         "launcher": "launcher",
         "scaffolding": "scaffolding"
       },
       "locked": {
-        "dir": "versions/0_2",
+        "dir": "versions/weekly",
         "lastModified": 1694844957,
         "narHash": "sha256-qmm+1UXfDtCb9S2GlBuat1OCas35rWRe1RrkklgQaZw=",
         "owner": "holochain",
@@ -469,7 +455,7 @@
         "type": "github"
       },
       "original": {
-        "dir": "versions/0_2",
+        "dir": "versions/weekly",
         "owner": "holochain",
         "repo": "holochain",
         "type": "github"
