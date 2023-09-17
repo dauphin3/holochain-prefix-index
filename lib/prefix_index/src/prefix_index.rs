@@ -80,14 +80,17 @@ impl PrefixIndex {
         if path.exists()? {
             if let Some(parent) = path.parent() {
                 // Get all children of parent of path
-                let children = get_links(
-                    parent.path_entry_hash()?,
-                    LinkTypeFilter::single_type(
+                let children = get_links(GetLinksInput {
+                    base_address: parent.path_entry_hash()?.into(),
+                    link_type: LinkTypeFilter::single_type(
                         self.link_type.zome_index,
                         self.link_type.zome_type,
                     ),
-                    None,
-                )?;
+                    tag_prefix: None,
+                    after: None,
+                    before: None,
+                    author: None,
+                })?;
 
                 let path_entry_hash = path.path_entry_hash()?;
                 let result_children: Vec<Link> = children
