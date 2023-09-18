@@ -11,7 +11,7 @@ members = ["dnas/*/zomes/coordinator/*", "dnas/*/zomes/integrity/*", "lib/*"]
 hdi = "=0.4.0-beta-dev.10"
 hdk = "=0.3.0-beta-dev.14"
 holochain_integrity_types = "=0.3.0-beta-dev.10"
-serde = "=1.0.171"
+serde = "=1.0.166"
 
 [workspace.dependencies.demo]
 path = "dnas/demo/zomes/coordinator/demo"
