@@ -102,7 +102,7 @@ impl PrefixIndex {
                 // Delete children link corresponding to current path
                 for child in result_children.clone().into_iter() {
                     let child_entry_hash =
-                        EntryHash::try_from(child.target).map_err(|err| wasm_error!(err))?;
+                        EntryHash::try_from(child.target).map_err(|_| wasm_error!(WasmErrorInner::Guest("Failed to convert target to entry hash".into())))?;
                     if child_entry_hash == path_entry_hash {
                         delete_link(child.create_link_hash)?;
                     }

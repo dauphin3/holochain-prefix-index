@@ -23,7 +23,7 @@ pub fn validate_create_link_prefix_index(
     let prefix_index_entry_hash = Path::from(prefix_index.index_name.clone()).path_entry_hash()?;
     if base_address == root_hash()? {
         let target_entry_hash =
-            EntryHash::try_from(target_address).map_err(|err| wasm_error!(err))?;
+            EntryHash::try_from(target_address).map_err(|_| wasm_error!(WasmErrorInner::Guest("Failed to convert target to entry hash".into())))?;
         if target_entry_hash != path_entry_hash {
             return Ok(ValidateCallbackResult::Invalid(
                 "PrefixIndex first component: target address must be index name".into(),
